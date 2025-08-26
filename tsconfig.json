@@ -1,0 +1,24 @@
+{
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    "paths": {
+      "$lib": ["./src/lib"],
+      "$lib/*": ["./src/lib/*"],
+      "$resources": ["./src/resources"],
+      "$resources/*": ["./src/resources/*"]
+    },
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "target": "esnext",
+    "lib": ["esnext", "DOM", "DOM.Iterable"],
+    "declaration": false,
+    "verbatimModuleSyntax": false,
+    "isolatedModules": true,
+    "noImplicitThis": true
+  },
+  "include": ["./src/**/*.ts", "./tests/**/*.ts", "./src/**/*.js", "./tests/**/*.js"],
+  "exclude": ["node_modules/**"]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "zero-trust-secure-provisioning",
+  "version": "1.0.0",
+  "description": "Example solution for authenticating, loading certificates and provisioning Webex RoomOS Devices",
+  "main": "src/server.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "start": "npm run build && fastify start -l info dist/server.js"
+  },
+  "author": "William Mills - wimills@cisco.com",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/autoload": "^5.10.0",
+    "@fastify/env": "^4.4.0",
+    "@fastify/sensible": "^5.6.0",
+    "@fastify/static": "^7.0.4",
+    "as-table": "^1.0.55",
+    "env-schema": "^6.0.0",
+    "fastify": "^4.28.0",
+    "fastify-cli": "^6.2.1",
+    "fastify-plugin": "^4.5.1",
+    "images": "^3.2.4",
+    "jsxapi": "^5.1.1",
+    "papaparse": "^5.4.1",
+    "qrcode": "^1.5.4",
+    "workspace-integrations": "^0.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/papaparse": "^5.3.14",
+    "@types/qrcode": "^1.5.5",
+    "concurrently": "^8.2.2",
+    "fastify-tsconfig": "^2.0.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.5.2"
+  },
+  "peerDependencies": {
+    "@babel/runtime-corejs2": "^7.21.0",
+    "webex": "^2.53.1"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": "=18.20.3",
+    "npm": ">=9"
+  }
+}
