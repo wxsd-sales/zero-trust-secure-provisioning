@@ -1,0 +1,55 @@
+
+  {
+  "name": "zero-trust-secure-provisioning",
+  "version": "1.0.0",
+  "description": "Example solution for authenticating, loading certificates and provisioning Webex RoomOS Devices",
+  "main": "src/server.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "start": "npm run build && node dist/src/server.js",
+    "test": "npm run build && node dist/test.js", 
+    "testteam": "npm run build && node dist/src/testteam.js",
+    "test-roomos": "npm run build && node dist/tests/roomos.js",
+    "test-card": "npm run build && node dist/tests/card.js",
+    "test-activate": "npm run build && node dist/tests/activate.js"
+  },
+  "author": "William Mills - wimills@cisco.com",
+  "license": "MIT",
+  "dependencies": {
+    "as-table": "^1.0.55",
+    "env-schema": "^6.0.0",
+    "images": "^3.2.4",
+    "jsxapi": "^5.1.1",
+    "papaparse": "^5.4.1",
+    "qrcode": "^1.5.4",
+    "ssl-checker": "^2.0.10",
+    "typed-rest-client": "^2.1.0",
+    "undici": "^7.4.0",
+    "websocket": "^1.0.35",
+    "workspace-integrations": "^0.9.1",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.24",
+    "@types/papaparse": "^5.3.14",
+    "@types/qrcode": "^1.5.5",
+    "@types/ws": "^8.18.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.5.2"
+  },
+  "peerDependencies": {
+    "@babel/runtime-corejs2": "^7.21.0",
+    "webex": "^2.53.1"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": "=18.20.3",
+    "npm": ">=9"
+  }
+}
